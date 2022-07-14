@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 116vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino{
+    background-image: url(rr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 72px;
+    position: absolute;
+    bottom:0;
+    left: 52px;
+}
+
+.obstacle{
+    background-image: url(oo-removebg-preview\ \(1\).png);
+    background-size: cover;
+    position: absolute;
+    bottom: -9px;
+    padding: 33px;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 4s linear infinite;
+}
+
+.start{
+    font-size: 63px;
+    position: absolute;
+    top: 3px;
+    font-weight: bold;
+    right: 445px;
+    font-family: cursive;
+    color: bisque;
+}
+
+.gameOver{
+    position: relative;
+    top: 182px;
+    font-size: 182px;
+    font-weight: bold;
+    color: rgb(164, 167, 45);
+    text-align: center; 
+    font-family:cursive
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 300px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+
+@media(max-width:409px){
+    .gameContainer{
+        background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100vw 116vh;
+        width: 90%;
+        height: 100vh;
+    }
+
+    .gameOver{
+        position: relative;
+        top: 182px;
+        font-size: 92px;
+        font-weight: bold;
+        color: rgb(164, 167, 45);
+        text-align: center; 
+        font-family:cursive
+    }
+
+    #scoreCont{
+        font-size: 25px;
+        color: #54212f;
+        font-weight: bold;
+        position: absolute;
+        right: 95px;
+        top: 31px;
+        border: 2px solid black;
+        padding: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        border-radius: 10px;
+    }
+    
+}
